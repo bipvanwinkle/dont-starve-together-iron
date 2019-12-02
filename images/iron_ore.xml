@@ -1,0 +1,6 @@
+<Atlas>
+    <Texture filename="iron.tex" />
+    <Elements>
+        <Element name="iron.tex" u1="0.781494140625" u2="0.812255859375" v1="0.562744140625" v2="0.593505859375" />
+    </Elements>
+</Atlas>

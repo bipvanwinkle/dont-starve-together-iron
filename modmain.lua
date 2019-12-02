@@ -14,7 +14,7 @@ local ironOre = AddRecipe(
     {   
         Ingredient("cutstone", 20)
     },                     
-    RECIPETABS.TOWN, 
+    RECIPETABS.REFINE, 
     TECH.NONE
 )
 --if GLOBAL.FOODTYPE then
