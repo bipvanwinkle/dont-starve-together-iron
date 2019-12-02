@@ -1,0 +1,3 @@
+tuning.lua - Where most stat-like constants are stored
+constants.lua - Where other constants are stored (foodtypes)
+scripts/prefablist.lua - Where the list of all prefabs is stored
