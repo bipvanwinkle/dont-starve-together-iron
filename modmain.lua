@@ -1,3 +1,4 @@
+local assets=
 {
 	Asset("ANIM", "anim/iron_ore.zip"),
 }
