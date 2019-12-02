@@ -4,7 +4,11 @@ local assets=
 }
 
 -- We are going to put setup code here until we figure out a better way to organize things
-FOODTYPE["IRON_ORE"] = "IRON_ORE"
+if FOODTYPE then
+    FOODTYPE["IRON_ORE"] = "IRON_ORE"
+else
+    print("What the buttkiss?")
+end
 
 local function onsave(inst, data)
 	data.anim = inst.animname
