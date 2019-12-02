@@ -3,12 +3,27 @@ local assets=
 	Asset("ANIM", "anim/iron_ore.zip"),
 }
 
--- We are going to put setup code here until we figure out a better way to organize things
-if FOODTYPE then
-    FOODTYPE["IRON_ORE"] = "IRON_ORE"
-else
-    print("What the buttkiss?")
-end
+local Recipe = GLOBAL.Recipe
+local FOODTYPE = GLOBAL.FOODTYPE
+local Ingredient = GLOBAL.Ingredient
+local RECIPETABS = GLOBAL.RECIPETABS
+local TECH = GLOBAL.TECH
+
+local ironOre = AddRecipe(
+    "iron_ore",
+    {   
+        Ingredient("cutstone", 20)
+    },                     
+    RECIPETABS.TOWN, 
+    TECH.NONE, 
+    "cellar_placer" 
+)
+--if GLOBAL.FOODTYPE then
+    --FOODTYPE = GLOBAL.FOODTYPE
+    --FOODTYPE["IRON_ORE"] = "IRON_ORE"
+--else
+    --print("What the buttkiss?")
+--end
 
 local function onsave(inst, data)
 	data.anim = inst.animname
@@ -54,11 +69,11 @@ local function fn()
 	--inst.components.repairer.repairmaterial = "orp"
 	--inst.components.repairer.healthrepairvalue = TUNING.REPAIR_ROCKS_HEALTH
     
-    inst:AddComponent("edible")
-    inst.components.edible.foodtype = FOODTYPE.IRON_ORE
-    inst.components.edible.healthvalue = TUNING.HEALING_HUGE
-    inst.components.edible.hungervalue = TUNING.CALORIES_HUGE
-    inst.components.edible.sanityvalue = TUNING.SANITY_HUGE
+    --inst:AddComponent("edible")
+    --inst.components.edible.foodtype = FOODTYPE.IRON_ORE
+    --inst.components.edible.healthvalue = TUNING.HEALING_HUGE
+    --inst.components.edible.hungervalue = TUNING.CALORIES_HUGE
+    --inst.components.edible.sanityvalue = TUNING.SANITY_HUGE
 
     inst.OnSave = onsave 
     inst.OnLoad = onload 
