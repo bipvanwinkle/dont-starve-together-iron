@@ -1,1 +1,2 @@
 1. Need to figure out how to appropriately modify the ther files
+2. Need to figure out how to extract texture files from Hamlet so that I can add them to this MOD
